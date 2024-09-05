@@ -22,9 +22,9 @@ removeTaskBtn.addEventListener("click", () => {
 
 function renderTasks() {
   taskList.innerHTML = "";
-  tasks.forEach((task) => {
+  tasks.forEach((task, index) => {
     const li = document.createElement("li");
-    li.textContent = task;
+    li.textContent = `${index + 1} -> ${task}`;
     taskList.appendChild(li);
   });
 }
